@@ -1,0 +1,5 @@
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {font-family:"Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",SimSun,sans-serif;}
+
+body {padding-top: 80px;}
+
+.tab-content-item {padding: 10px; border: 1px solid #ECF0F1; border-top: 0;}

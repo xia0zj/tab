@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab选项卡切换 - 贰陆的前端小仓库</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">
+                    贰陆的前端小仓库
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">使用</a></li>
+                <li class="active"><a href="example.html">演示</a></li>
+                <li><a href="">下载</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1>tab选项卡切换 <small>v1.0</small></h1>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>&nbsp;click触发切换（data属性调用）</h3>
+            </div>
+            <div class="col-sm-6">
+<pre>
+&lt;div class="tab J_Tab" data-toggle="tab"&gt;
+    &lt;div class="tab-nav"&gt;
+        &lt;ul class="tab-nav-items"&gt;
+            &lt;li&gt;Nav1&lt;/li&gt;
+            &lt;li&gt;Nav2&lt;/li&gt;
+            &lt;li&gt;Nav3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <div class="tab J_Tab" data-toggle="tab">
+                    <div class="tab-nav">
+                        <ul class="nav nav-tabs tab-nav-items">
+                            <li><a href="">Nav1</a></li>
+                            <li><a href="">Nav2</a></li>
+                            <li><a href="">Nav3</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-item hide">
+                        首先，客观世界中的对象的产生都是其它实物对象构造的结果，而抽象的“图纸”是不能产生“汽车”的，也就是说，类是一个抽象概念而并非实体，而对象的产生是一个实体的产生；
+                    </div>
+                    <div class="tab-content-item hide">
+                        其次，按照一切事物皆对象这个最基本的面向对象的法则来看，类 (class) 本身并不是一个对象，然而原型方式中的构造器 (constructor) 和原型 (prototype) 本身也是其他对象通过原型方式构造出来的对象。
+                    </div>
+                    <div class="tab-content-item hide">
+                        再次，在类式面向对象语言中，对象的状态 (state) 由对象实例 (instance) 所持有，对象的行为方法 (method) 则由声明该对象的类所持有，并且只有对象的结构和方法能够被继承；而在原型式面向对象语言中，对象的行为、状态都属于对象本身，并且能够一起被继承（参考资源），这也更贴近客观实际。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>mouseenter触发切换（data属性调用）</h3>
+            </div>
+            <div class="col-sm-6">
+<pre>
+&lt;div class="tab J_Tab" data-toggle="tab" data-trigger="mouseenter"&gt;
+    &lt;div class="tab-nav"&gt;
+        &lt;ul class="tab-nav-items"&gt;
+            &lt;li&gt;Nav1&lt;/li&gt;
+            &lt;li&gt;Nav2&lt;/li&gt;
+            &lt;li&gt;Nav3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <div class="tab J_Tab" data-toggle="tab" data-trigger="mouseenter">
+                    <div class="tab-nav">
+                        <ul class="nav nav-tabs tab-nav-items">
+                            <li><a href="">Nav1</a></li>
+                            <li><a href="">Nav2</a></li>
+                            <li><a href="">Nav3</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-item hide">
+                        首先，客观世界中的对象的产生都是其它实物对象构造的结果，而抽象的“图纸”是不能产生“汽车”的，也就是说，类是一个抽象概念而并非实体，而对象的产生是一个实体的产生；
+                    </div>
+                    <div class="tab-content-item hide">
+                        其次，按照一切事物皆对象这个最基本的面向对象的法则来看，类 (class) 本身并不是一个对象，然而原型方式中的构造器 (constructor) 和原型 (prototype) 本身也是其他对象通过原型方式构造出来的对象。
+                    </div>
+                    <div class="tab-content-item hide">
+                        再次，在类式面向对象语言中，对象的状态 (state) 由对象实例 (instance) 所持有，对象的行为方法 (method) 则由声明该对象的类所持有，并且只有对象的结构和方法能够被继承；而在原型式面向对象语言中，对象的行为、状态都属于对象本身，并且能够一起被继承（参考资源），这也更贴近客观实际。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Javascript调用方法</h3>
+            </div>
+            <div class="col-sm-6">
+<pre>
+&lt;div class="tab" id="TabA"&gt;
+    &lt;div class="tab-nav"&gt;
+        &lt;ul class="tab-nav-items"&gt;
+            &lt;li&gt;Nav1&lt;/li&gt;
+            &lt;li&gt;Nav2&lt;/li&gt;
+            &lt;li&gt;Nav3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+$("#TabA").tab();
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <div class="tab" id="TabA">
+                    <div class="tab-nav">
+                        <ul class="nav nav-tabs tab-nav-items">
+                            <li><a href="">Nav1</a></li>
+                            <li><a href="">Nav2</a></li>
+                            <li><a href="">Nav3</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-item hide">
+                        首先，客观世界中的对象的产生都是其它实物对象构造的结果，而抽象的“图纸”是不能产生“汽车”的，也就是说，类是一个抽象概念而并非实体，而对象的产生是一个实体的产生；
+                    </div>
+                    <div class="tab-content-item hide">
+                        其次，按照一切事物皆对象这个最基本的面向对象的法则来看，类 (class) 本身并不是一个对象，然而原型方式中的构造器 (constructor) 和原型 (prototype) 本身也是其他对象通过原型方式构造出来的对象。
+                    </div>
+                    <div class="tab-content-item hide">
+                        再次，在类式面向对象语言中，对象的状态 (state) 由对象实例 (instance) 所持有，对象的行为方法 (method) 则由声明该对象的类所持有，并且只有对象的结构和方法能够被继承；而在原型式面向对象语言中，对象的行为、状态都属于对象本身，并且能够一起被继承（参考资源），这也更贴近客观实际。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>&nbsp;Javascript调用方法优先于Data属性调用</h3>
+                <blockquote class="text-success">当同时使用Data属性调用和Javascript调用时，后者优先级高</blockquote>
+            </div>
+            <div class="col-sm-6">
+<pre>
+&lt;div class="tab J_Tab" data-toggle="tab" id="TabB"&gt;
+    &lt;div class="tab-nav"&gt;
+        &lt;ul class="tab-nav-items"&gt;
+            &lt;li&gt;Nav1&lt;/li&gt;
+            &lt;li&gt;Nav2&lt;/li&gt;
+            &lt;li&gt;Nav3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+$("#TabB").tab({trigger:"mouseenter"});
+</pre>
+            </div>
+            <div class="col-sm-6">
+                <div class="tab J_Tab" data-toggle="tab" id="TabB">
+                    <div class="tab-nav">
+                        <ul class="nav nav-tabs tab-nav-items">
+                            <li><a href="">Nav1</a></li>
+                            <li><a href="">Nav2</a></li>
+                            <li><a href="">Nav3</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content-item hide">
+                        首先，客观世界中的对象的产生都是其它实物对象构造的结果，而抽象的“图纸”是不能产生“汽车”的，也就是说，类是一个抽象概念而并非实体，而对象的产生是一个实体的产生；
+                    </div>
+                    <div class="tab-content-item hide">
+                        其次，按照一切事物皆对象这个最基本的面向对象的法则来看，类 (class) 本身并不是一个对象，然而原型方式中的构造器 (constructor) 和原型 (prototype) 本身也是其他对象通过原型方式构造出来的对象。
+                    </div>
+                    <div class="tab-content-item hide">
+                        再次，在类式面向对象语言中，对象的状态 (state) 由对象实例 (instance) 所持有，对象的行为方法 (method) 则由声明该对象的类所持有，并且只有对象的结构和方法能够被继承；而在原型式面向对象语言中，对象的行为、状态都属于对象本身，并且能够一起被继承（参考资源），这也更贴近客观实际。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="clearfix text-muted">
+            <span class="pull-left">Copyright &copy; xia0zj</span>
+            <span class="pull-right">https://github.com/xia0zj</span>
+        </div>
+    </div>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="../lib/jquery.js"><\/script>');
+    </script>
+    <script src="../jquery.tab.min.js"></script>
+    <script>
+    $("#TabA").tab();
+    $("#TabB").tab({trigger:"mouseenter"});
+    </script>
+</body>
+</html>

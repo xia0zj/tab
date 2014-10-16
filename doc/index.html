@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab选项卡切换 - 贰陆的前端小仓库</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="example.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">
+                    贰陆的前端小仓库
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">使用</a></li>
+                <li><a href="example.html">演示</a></li>
+                <li><a href="">下载</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1>tab选项卡切换 <small>v1.0</small></h1>
+            <p>很简单的一个小插件，应用于网页上常见的tab切换效果</p>
+        </div>
+        <hr>
+        <h3>第一步：引入JS</h3>
+<pre>
+&lt;script src="jquery.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.tab.js"&gt;&lt;/script&gt;
+</pre>
+        <h3>第二步：HTML结构</h3>
+<pre>
+&lt;div class="tab J_Tab" data-toggle="tab"&gt;
+    &lt;div class="tab-nav"&gt;
+        &lt;ul class="tab-nav-items"&gt;
+            &lt;li&gt;Nav1&lt;/li&gt;
+            &lt;li&gt;Nav2&lt;/li&gt;
+            &lt;li&gt;Nav3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+    &lt;div class="tab-content-item hide"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <p>给整个容器添加class="J_Tab"和data-toggle="tab"</p>
+        <h3>第三步：添加合适的CSS</h3>
+        <p>根据自己需要，添加合适的CSS</p>
+<pre>
+.tab {}
+.tab .tab-nav {}
+.tab .tab-nav-items {}
+.tab .tab-nav-items li {}
+.tab .tab-nav-items .active {}
+.tab .tab-content-item {}
+.hide {display:none;}
+</pre>
+        <h2>参数说明：</h2>
+        <p>通过Data属性和Javascript均可修改参数，后者优先级高</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Data属性名</th>
+                    <th>对应参数</th>
+                    <th>描述</th>
+                    <th>默认值</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data-trigger</td>
+                    <td>trigger</td>
+                    <td>触发方式，click或mouseenter</td>
+                    <td>click</td>
+                </tr>
+                <tr>
+                    <td>data-nav</td>
+                    <td>navItemSelector</td>
+                    <td>事件触发对象选择器</td>
+                    <td>.tab-nav-items li</td>
+                </tr>
+                <tr>
+                    <td>data-content</td>
+                    <td>contentItemSelector</td>
+                    <td>内容主体对象选择器</td>
+                    <td>.tab-content-item</td>
+                </tr>
+                <tr>
+                    <td>data-active</td>
+                    <td>navItemActiveClass</td>
+                    <td>触发器激活后的Class</td>
+                    <td>active</td>
+                </tr>
+                <tr>
+                    <td>data-begin</td>
+                    <td>beginIndex</td>
+                    <td>默认显示第几个</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <div class="clearfix text-muted">
+            <span class="pull-left">Copyright &copy; xia0zj</span>
+            <span class="pull-right">https://github.com/xia0zj</span>
+        </div>
+    </div>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="../lib/jquery.js"><\/script>');
+    </script>
+    <script src="../jquery.tab.min.js"></script>
+    <script>
+    $("#TabA").tab();
+    $("#TabB").tab({trigger:"mouseenter"});
+    </script>
+</body>
+</html>

@@ -1,4 +1,5 @@
-(function($) {
+define(function(require, exports, module) {
+    var $ = require("jquery");
     /**
     * TAB切换效果
     * @param  {string} trigger 切换方式click或mouseenter
@@ -63,4 +64,4 @@
             });
         }
     });
-})(jQuery);
+});

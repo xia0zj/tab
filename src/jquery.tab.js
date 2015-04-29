@@ -1,5 +1,13 @@
-define(function(require, exports, module) {
-    var $ = require("jquery");
+(function(factory) {
+    if (typeof define === 'function') {
+        define('tab', ['jquery'], function(require, exports, modules) {
+            factory(require('jquery'));
+            return factory;
+        });
+    } else {
+        factory(jQuery);
+    }
+})(function($) {
     /**
     * TAB切换效果
     * @param  {string} trigger 切换方式click或mouseenter
@@ -14,7 +22,7 @@ define(function(require, exports, module) {
                 trigger             : "click",
                 navItemSelector     : ".tab-nav-items li",
                 contentItemSelector : ".tab-content-item",
-                navItemActiveClass  : "active",
+                activeClass         : "active",
                 beginIndex          : 0
             }, option || {});
 
@@ -22,23 +30,23 @@ define(function(require, exports, module) {
             var $navItems     = $container.find(opts.navItemSelector);
             var $contentItems = $container.find(opts.contentItemSelector);
 
-            if (!$container.length) return;
-            if ($container.data("tabid")) return;
+            if (!$container.length || $container.data("tabid")) return;
 
             $container.data( "tabid", (new Date()).getTime() );
 
             var _handler = function() {
                 var _this = arguments[0].type ? $(this) : $navItems.eq(arguments[0]);
-                if ( _this.hasClass( opts.navItemActiveClass ) ) return;
+                if ( _this.hasClass( opts.activeClass ) ) return;
 
-                var index = $navItems.index(_this);
+                var active = opts.activeClass;
+                var index  = $navItems.index(_this);
                 var target = _this.data("target") ? $(_this.data("target")) : $contentItems.eq(index);
 
-                $navItems.removeClass(opts.navItemActiveClass);
-                $contentItems.addClass("hide").hide();
+                $navItems.removeClass( active );
+                $contentItems.removeClass( active );
 
-                _this.addClass(opts.navItemActiveClass);
-                target.removeClass("hide").show();
+                _this.addClass( active );
+                target.addClass( active );
 
                 return false;
             }
@@ -58,8 +66,8 @@ define(function(require, exports, module) {
                     trigger             : $this.data("trigger"),
                     navItemSelector     : $this.data("nav"),
                     contentItemSelector : $this.data("content"),
-                    navItemActiveClass  : $this.data("active"),
-                    beginIndex          : $this.data("begin")
+                    activeClass         : $this.data("active"),
+                    beginIndex          : $this.data("begin") || 0
                 });
             });
         }
